@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .dockerfile
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_DB: homeo_manager
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+[type="checkbox"],
+[type="radio"],
+a {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+[type="checkbox"] {
+    color: rgb(132 204 22 / var(--tw-bg-opacity));
+}
+
+.active {
+    color: #ffffff;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.23);
+}
